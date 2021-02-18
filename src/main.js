@@ -42,6 +42,7 @@ router.beforeEach((to, from, next) => {
 });
 
 
+
 new Vue({
     router,
     i18n,
