@@ -29,7 +29,7 @@
                 </div>
                 <!-- 用户头像 -->
                 <div class="user-avator">
-                    <img src="../../assets/img/img.jpg" />
+                    <img src="~assets/img/img.jpg" />
                 </div>
                 <!-- 用户名下拉菜单 -->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
@@ -38,8 +38,11 @@
                         <i class="el-icon-caret-bottom"></i>
                     </span>
                     <el-dropdown-menu slot="dropdown">
-                        <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
+                        <a href="https://github.com/coderwjp/car-sys" target="_blank">
                             <el-dropdown-item>项目仓库</el-dropdown-item>
+                        </a>
+                         <a href="https://element.eleme.cn/#/zh-CN/component/installation" target="_blank">
+                            <el-dropdown-item>UI</el-dropdown-item>
                         </a>
                         <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
@@ -53,7 +56,7 @@ import bus from '../common/bus';
 export default {
     data() {
         return {
-            collapse: false,
+            collapse: true,
             fullscreen: false,
             name: 'linxin',
             message: 2

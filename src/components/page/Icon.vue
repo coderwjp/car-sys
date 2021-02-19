@@ -1,12 +1,8 @@
 <template>
     <div>
-        <div class="crumbs">
-            <el-breadcrumb separator="/">
-                <el-breadcrumb-item><i class="el-icon-lx-emoji"></i> 自定义图标</el-breadcrumb-item>
-            </el-breadcrumb>
-        </div>
+        
         <div class="container">
-            <h2>使用方法</h2>
+            <h2>使用方法</h2><i class="el-icon-eleme"></i>
             <p style="line-height: 50px;">
                 直接通过设置类名为 el-icon-lx-iconName 来使用即可。例如：（共{{iconList.length}}个图标）
             </p>
@@ -171,6 +167,7 @@
                     'searchlist',
                     'search',
                     'edit'
+                    
                 ]
             }
         },

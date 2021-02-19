@@ -1,12 +1,6 @@
 <template>
     <div>
-        <div class="crumbs">
-            <el-breadcrumb separator="/">
-                <el-breadcrumb-item>
-                    <i class="el-icon-lx-cascades"></i> 基础表格
-                </el-breadcrumb-item>
-            </el-breadcrumb>
-        </div>
+        
         <div class="container">
             <div class="handle-box">
                 <el-button
@@ -102,7 +96,9 @@
 </template>
 
 <script>
-import { fetchData } from '../../api/index';
+// import { request } from 'network/request';
+import { getTableData } from '../../api/index';
+
 export default {
     name: 'basetable',
     data() {
@@ -129,11 +125,12 @@ export default {
     methods: {
         // 获取 easy-mock 的模拟数据
         getData() {
-            fetchData(this.query).then(res => {
-                console.log(res);
+
+            getTableData(this.query).then(res => {
                 this.tableData = res.list;
                 this.pageTotal = res.pageTotal || 50;
             });
+            
         },
         // 触发搜索按钮
         handleSearch() {
@@ -202,7 +199,7 @@ export default {
 }
 .table {
     width: 100%;
-    font-size: 14px;
+    font-size: 12px;
 }
 .red {
     color: #ff0000;
